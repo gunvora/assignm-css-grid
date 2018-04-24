@@ -1,0 +1,96 @@
+* {
+  font-family: Helvetica,Arial,sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: #e6e5e5fc;
+}
+
+h1, h2, h4, h5, h6 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  align-content: center;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+h6 {
+  font-size: 8px;
+  font-weight: 100;
+}
+
+h4, h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.my-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 150px;
+  grid-gap: 10px;
+}
+
+.grid-item {
+  position: relative;
+  background: white;
+  color: black;
+  margin-left: 10px;
+}
+
+.grid-item > span,
+.grid-item > img {
+  font-size: 30px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.tall {
+  grid-row: span 2;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.back-black {
+  background: black;
+}
+
+.font-white {
+  color: white;
+}
+
+.font-lightgrey {
+  color: #d0cbcb;
+}
+
+.font-darkgrey {
+  color: #6d6c6c;
+}
+
+.small-font-darkgrey h6 {
+  color: #6d6c6c;
+}
+
+.letter-space h2 {
+  word-break: break-all;
+  letter-spacing: 6px;
+}
+
+@media (max-width: 500px) {
+  .my-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
